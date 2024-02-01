@@ -1,0 +1,33 @@
+{
+  "name": "aaopao",
+  "version": "1.0.0",
+  "description": "A food ordering webapp",
+  "main": "App.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imjugalgoswami/AaoPao.git"
+  },
+  "keywords": [
+    "aaopao",
+    "foodorderingapp"
+  ],
+  "author": "Jugal Goswami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imjugalgoswami/AaoPao/issues"
+  },
+  "homepage": "https://github.com/imjugalgoswami/AaoPao#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

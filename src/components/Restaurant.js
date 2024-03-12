@@ -17,18 +17,18 @@ const Restaurant = ()=>{
     }
 
     // console.log("hello");
-    const {name,cuisines,costForTwoMessage,locality,veg,avgRatingString,totalRatingsString} = resInfo?.cards[2]?.card?.card?.info;
-    const {deliveryTime,lastMileTravelString,slaString} = resInfo?.cards[2]?.card?.card?.info?.sla;
-    const {message} = resInfo?.cards[2]?.card?.card?.info?.feeDetails;
-    const offerInfo = resInfo?.cards[2]?.card?.card?.info?.aggregatedDiscountInfo;
-    const {descriptionList} = resInfo?.cards[2]?.card?.card?.info?.aggregatedDiscountInfoV2;
-    // console.log(descriptionList);
+    const {name,cuisines,costForTwoMessage,locality,veg,avgRatingString,totalRatingsString} = resInfo?.cards[0]?.card?.card?.info;
+    const {deliveryTime,lastMileTravelString,slaString} = resInfo?.cards[0]?.card?.card?.info?.sla;
+    const {message} = resInfo?.cards[0]?.card?.card?.info?.feeDetails;
+    const offerInfo = resInfo?.cards[0]?.card?.card?.info?.aggregatedDiscountInfo;
+    const {descriptionList} = resInfo?.cards[0]?.card?.card?.info?.aggregatedDiscountInfoV2;
+    // console.log(descriptionList)2
 
-    const {itemCards,title} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>{
+    const {itemCards,title} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>{
         return c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
     });
-    console.log(categories);
+    // console.log(categories);
     // console.log(itemCards);
 
     return (

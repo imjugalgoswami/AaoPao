@@ -5,5 +5,5 @@ const UserContext = createContext({
     loggedInUser : "Default User",
 });
 
-console.log(UserContext);
+// console.log(UserContext);
 export default UserContext;

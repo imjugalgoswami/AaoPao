@@ -9,7 +9,7 @@ const Body = ()=>{
     const [searchText,setSearchText] = useState("");
     const [ filteredRestaurants,setFilteredRestaurants] = useState([]);
     const {loggedInUser,setUserName} = useContext(UserContext);
-    console.log(useContext(UserContext));
+    // console.log(useContext(UserContext));
 
     useEffect(()=>{
         fetchData();

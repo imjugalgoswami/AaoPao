@@ -2,11 +2,11 @@ import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
 import { addItem } from "../utils/cartSlice";
 const MenuCard = (props)=>{
+    console.log(props);
     const {name,imageId,isVeg,defaultPrice,price,description} = props.info;
-    // console.log(props);
     const dispatch = useDispatch();
-    function addToCartHandler(){
-        dispatch(addItem("pizza"));
+    function addToCartHandler(item){
+        dispatch(addItem(item));
     }
     return (
         <div>
@@ -19,7 +19,7 @@ const MenuCard = (props)=>{
                 </div>
                 <div className="w-[120px] h-[90px] absolute top-1/2 transform translate-y-[-70%] right-0">
                     <img className="w-full h-full object-center shadow-md rounded-md" src={CDN_URL+imageId}/>
-                    <button onClick={addToCartHandler} className="py-1 px-4 shadow-lg rounded-md text-green-700 bg-white relative top-[-20] left-[50%] transform translate-x-[-50%] ">Add +</button>
+                    <button onClick={() => addToCartHandler(props.info)} className="py-1 px-4 shadow-lg rounded-md text-green-700 bg-white relative top-[-20] left-[50%] transform translate-x-[-50%] ">Add +</button>
                 </div>
             </div>
             <hr className=" border-gray-300"/>
